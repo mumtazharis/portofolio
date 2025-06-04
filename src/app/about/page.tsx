@@ -30,7 +30,7 @@ export default function AboutPage() {
             Saya memiliki ketertarikan besar dalam pengembangan aplikasi web menggunakan <span className="font-semibold">Laravel</span> dan <span className="font-semibold">Next.js</span>, serta antusias dalam mengeksplorasi <span className="font-semibold">Machine Learning</span> di bidang <span className="font-semibold">Computer Vision</span>.
           </p>
           <p className="text-lg md:text-xl mb-4 max-w-3xl leading-relaxed">
-            Dalam berbagai proyek, saya sering mengambil peran sebagai <span className="font-semibold">Fullstack Developer atau Backend Develope</span>, namun saya juga aktif di sisi Machine Learning ketika dibutuhkan. Saya menikmati proses membangun sistem dari nol, mulai dari perencanaan, pengembangan, hingga deployment.
+            Dalam berbagai proyek, saya sering mengambil peran sebagai <span className="font-semibold">Fullstack Developer atau Backend Developer</span>, namun saya juga aktif di sisi Machine Learning ketika dibutuhkan. Saya menikmati proses membangun sistem dari nol, mulai dari perencanaan, pengembangan, hingga deployment.
           </p>
           <p className="text-lg md:text-xl max-w-3xl leading-relaxed">
             Saya percaya bahwa teknologi seharusnya menyelesaikan masalah nyata. Karena itu, saya berusaha membangun aplikasi yang tidak hanya fungsional, tapi juga intuitif dan mudah digunakan.
@@ -39,9 +39,9 @@ export default function AboutPage() {
           <div className="mt-10">
             <h3 className="text-2xl font-semibold mb-2">Keahlian</h3>
             <ul className="list-disc list-inside text-gray-700 text-base md:text-lg space-y-1">
-              <li><span className="font-medium">Bahasa & Framework:</span> Python, Java, PHP, Javascript, Laravel, Next.js, Flask, FastAP</li>
+              <li><span className="font-medium">Bahasa & Framework:</span> Python, Java, PHP, Javascript, Laravel, Next.js, Flask, FastAPI</li>
               <li><span className="font-medium">Basis Data:</span> MySQL, PostgreSQL</li>
-              <li><span className="font-medium">Tools:</span> Git, Tailwind, Docker (basic)</li>
+              <li><span className="font-medium">Tools:</span> Git, Tailwind, Docker</li>
               <li><span className="font-medium">Soft Skills:</span> Komunikasi, Kolaborasi Tim, Manajemen Waktu, Problem Solving</li>
             </ul>
           </div>
