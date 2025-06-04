@@ -14,7 +14,7 @@ export default function AboutPage() {
         {/* Foto Diri */}
         <div className="w-full md:w-1/3 flex justify-center md:justify-start">
           <Image
-            src="/images/Hotpot-Photoroom.png" // Ganti dengan path gambar kamu
+            src="/images/Hotpot-Photoroom.png"
             alt="Foto Ahmad Mumtaz Haris"
             width={300}
             height={300}

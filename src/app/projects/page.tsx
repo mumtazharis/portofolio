@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/card"
 import Image from "next/image"
 import { FaGithub, FaFigma } from "react-icons/fa6"
-import Link from "next/link"
 
 const projects = [
   {
@@ -31,16 +30,16 @@ const projects = [
     image: "/images/projects/framefit.png",
     frontend: "https://github.com/mumtazharis/frame_fit",
     backend: "https://github.com/mumtazharis/flask_framefit",
+    machine_learning: "https://github.com/mumtazharis/machine_learning_framefit",
     figma: "https://www.figma.com/design/UUmsnhUAxzx22MX5eEkCcc/framefit?node-id=0-1&p=f&t=nuGNWprthEEq1m0u-0"
   },
   {
     title: "RWKu",
     year: "2024",
-    description: "Aplikasi berbasis web untuk administrasi data warga dan mengelola kegiatan warga di tingkat RW",
+    description: "Aplikasi berbasis web untuk administrasi data warga dan mengelola kegiatan dan iuran kegiatan warga di tingkat RW. Besaran iuran ditentukan menggunakan SPK.",
     tech: ["Laravel", "Bootstrap", "MySQL"],
-    image: "/images/trash-preview.jpg",
-    frontend: "https://github.com/mumtazharis/frame_fit",
-    backend: "https://github.com/mumtazharis/flask_framefit",
+    image: "/images/projects/rwku.png",
+    github: "https://github.com/mumtazharis/RWKu",
     figma: "https://www.figma.com/design/AdhUnYC9COcE07IRRUMzBF/Mockup?node-id=0-1&p=f&t=ngi1HOp71vEv2wjy-0"
   },
   {
@@ -49,8 +48,7 @@ const projects = [
     description: "Aplikasi berbasis web untuk pelaporan pelanggaran tata tertib mahasiswa",
     tech: ["Native PHP", "Javascript", "CSS", "MySQL"],
     image: "/images/projects/sitatib.png",
-    frontend: "https://github.com/mumtazharis/frame_fit",
-    backend: "https://github.com/mumtazharis/flask_framefit",
+    github: "https://github.com/mumtazharis/Pay2Win-Tata-Tertib-Mahasiswa-TI2F",
     figma: "https://www.figma.com/design/UUmsnhUAxzx22MX5eEkCcc/framefit?node-id=0-1&p=f&t=nuGNWprthEEq1m0u-0"
   },
 
@@ -94,27 +92,56 @@ export default function ProjectPage() {
                     
                     <CardFooter className="flex flex-col gap-3">
                     <div className="flex flex-wrap gap-4">
+                      {project.frontend && project.backend && (
+                        <>
+                          <a
+                            href={project.frontend}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-zinc-600 hover:text-black"
+                          >
+                            <FaGithub /> Frontend
+                          </a>
+                          <a
+                            href={project.backend}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-zinc-600 hover:text-black"
+                          >
+                            <FaGithub /> Backend
+                          </a>
+                        </>
+                      )}
+                      {!project.frontend && !project.backend && project.github && (
                         <a
-                        href={project.frontend}
-                        target="_blank"
-                        className="flex items-center gap-2 text-zinc-600 hover:text-black"
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-zinc-600 hover:text-black"
                         >
-                        <FaGithub /> Frontend
+                          <FaGithub /> Repository
                         </a>
+                      )}
+                      {project.title === "FrameFit" && (
                         <a
-                        href={project.backend}
-                        target="_blank"
-                        className="flex items-center gap-2 text-zinc-600 hover:text-black"
+                          href={project.machine_learning}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-zinc-600 hover:text-black"
                         >
-                        <FaGithub /> Backend
+                          <FaGithub /> Machine Learning
                         </a>
+                      )}
+                      {project.figma && (
                         <a
-                        href={project.figma}
-                        target="_blank"
-                        className="flex items-center gap-2 text-zinc-600 hover:text-black"
+                          href={project.figma}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-zinc-600 hover:text-black"
                         >
-                        <FaFigma /> Desain UI
+                          <FaFigma /> Desain UI
                         </a>
+                      )}
                     </div>
                     </CardFooter>
                 </Card>

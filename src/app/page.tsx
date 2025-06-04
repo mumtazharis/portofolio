@@ -6,11 +6,7 @@ export default function Home() {
     <section
       id="home"
       className="min-h-[calc(100vh-80px)] flex justify-center items-center px-6 md:px-24 bg-cover bg-center relative"
-      // style={{ backgroundImage: "url('/images/bg.jpg')" }}
     >
-      {/* Overlay Transparan */}
-      {/* <div className="absolute inset-0 bg-white/70 backdrop-blur-sm z-0" /> */}
-
       {/* Konten */}
       <div className="relative z-10 max-w-3xl">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
