@@ -14,6 +14,7 @@ const Navbar = () => {
   ];
 
   return (
+    <>
     <nav className="fixed top-0 w-full z-50 bg-white shadow-md">
       <div className="flex items-center justify-between p-4">
         <h1 className="text-xl font-semibold tracking-tight">Ahmad Mumtaz Haris</h1>
@@ -37,12 +38,12 @@ const Navbar = () => {
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
+    </nav>
       {/* Mobile Nav */}
       {menuOpen && (
-        <ul className="md:hidden bg-white shadow-inner px-4 pb-4 space-y-2">
-          {navItems.map((item) => (
-            <li key={item.label}>
+        <ul className="md:hidden bg-white shadow-inner px-4 pb-4 space-y-4 fixed w-full z-40">
+          {navItems.map((item, index) => (
+            <li key={item.label} className={index === 0 ? "mt-[80px]" : ""}>
               <a
                 href={item.href}
                 className="block text-gray-700 hover:text-gray-400 transition"
@@ -54,7 +55,7 @@ const Navbar = () => {
           ))}
         </ul>
       )}
-    </nav>
+    </>
   );
 };
 
